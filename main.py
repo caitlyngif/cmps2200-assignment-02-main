@@ -6,6 +6,13 @@ from collections import defaultdict
 import math
 
 #### Iterative solution
+
+def iterate(f, curr, list):
+    result = curr
+    for n in list:
+        result = f(result, n)
+    return result
+
 def parens_match_iterative(mylist):
     """
     Implement the iterative solution to the parens matching problem.
@@ -58,6 +65,15 @@ def parens_update(current_output, next_input):
 
 
 #### Scan solution
+
+def reduce(f, curr, list):
+    result = curr
+    for n in list:
+        result = f(result, n)
+    return result
+
+def plus(x,y):
+    return x + y
 
 def parens_match_scan(mylist):
     """
